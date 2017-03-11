@@ -1,9 +1,10 @@
 var fn  = {
 	deviceready: function(){
-		document.addEventListener("deviceready", fn.init,false);
+		document.addEventListener("deviceready", fn.init, false);
 	},
 
 	init: function(){
+alert("HOLA");
 		/*
 		 * En esta seccion vamos a asociar
 		 * todos los eventos del "Click" al HTML
