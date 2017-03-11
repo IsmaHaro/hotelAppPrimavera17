@@ -4,7 +4,6 @@ var fn  = {
 	},
 
 	init: function(){
-alert("HOLA");
 		/*
 		 * En esta seccion vamos a asociar
 		 * todos los eventos del "Click" al HTML
@@ -44,7 +43,7 @@ alert("HOLA");
 				throw new Error("El email debe contener un arroba");
 			}
 
-			if(Number.isNan(Number(tel))){
+			if(Number.isNaN(Number(tel))){
 				throw new Error("El teléfono debe de ser numérico");
 			}
 
