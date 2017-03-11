@@ -98,4 +98,6 @@ alert("HOLA");
  * LLAMAR DEVICEREADY
  * PARA COMPILAR
  */
-$(fn.deviceready);
+//$(fn.deviceready);
+alert("Ejecutando JS");
+fn.deviceready();
