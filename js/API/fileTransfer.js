@@ -4,7 +4,10 @@ var file = {
 		window.location.href = "#home";
 	},
 
-	error: function(){
+	error: function(error){
+alert(error.code);
+alert(error.source);
+alert(error.target);
 		alert("Error al enviar foto al servidor");
 	},
 
@@ -16,8 +19,12 @@ var file = {
 		options.fileKey  = "foto";
 		options.fileName = "miFoto";
 		options.mimeType = "image/jpeg";
+		options.chunkedMode = false;
+		options.headers = {
+			Connection: "close"
+		};
 
 		var ft = new FileTransfer();
-		ft.upload(fileURL, "http://www.colors.edu.mx/archivoTest.php", file.exito, file.error, options);
+		ft.upload(fileURL, encodeURI("http://www.colors.edu.mx/archivoTest.php"), file.exito, file.error, options);
 	}
 };
